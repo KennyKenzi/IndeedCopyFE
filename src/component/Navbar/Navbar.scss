@@ -1,0 +1,154 @@
+
+// // $navbar-padding-y: 0px;
+// // $navbar-brand-padding-y: 0px;
+//  $navbar-padding-y: 0px;
+$themecolour1: rgb(48, 47, 47);
+$themecolour2: rgb(139, 139, 139);
+$themecolour3: #2557a7;
+
+
+
+img.navbar-brand{
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 150px;
+  align-items: center;
+  @media screen and (max-width: 992px) {
+    max-width: 110px;
+  }
+}
+.app__navbar-nogap {
+    padding: 0px;
+    margin: 0px;    
+    @media screen and (max-width: 992px) {
+      display: none;
+      
+    }
+}
+nav.app__navbar {
+    padding-bottom: 0;
+}
+.app__navbar-logospace{
+  // width: 160px;
+  align-items: center;
+
+
+}
+
+ul.navbar-nav.mr-auto li{
+    // display: flex;
+    //border-style: dashed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-item a{
+  color: $themecolour1
+}
+
+
+ .navbar-nav.mr-auto li:hover{
+  border-bottom-style: solid;
+  border-bottom-color: rgb(32, 79, 117)
+}
+.app__navbar-navend .nav-link{
+  // margin-left: 1rem;
+  margin-right: 1.5rem;
+  padding-top: 1rem;
+}
+.bi{
+  font-size: 1.5rem;
+}.bi-search, .bi-geo-alt-fill{
+  font-size: 1rem;
+  padding: 10px;
+  position:relative;
+  box-sizing:border-box;
+  top:50%;
+  right:2px;
+  color: $themecolour1;
+  
+}
+div.app__navbar-navend div{
+  width: 1px;
+  height: 30px;
+  background-color: $themecolour1
+}
+
+
+@media screen and (max-width: 992px)
+{ 
+  div.app__navbar-navend{
+    flex-direction: row;
+    margin-left: auto;
+
+  }
+  div.app__navbar-navend .nav-text-extra{
+    display: none;
+
+  }
+
+ }
+
+ .app__navbar-smallscreen_searchbar{
+ // display: none;
+    @media screen and (max-width: 992px)
+    { 
+        display: flex;
+        margin-left: auto;
+        min-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.app__navbar-smallscreen_searchform{
+  justify-content: center;
+  padding-top: 2rem;
+  width: 100%;
+}.form-row .col-auto{
+  min-height: 3rem;
+  //margin-top: 1.5rem;
+
+}
+button.btn.searchform_item{
+  width: 100%;
+  min-height: 3rem;
+  background-color: $themecolour3;
+}
+span.input-group-text {
+  background-color: white;
+  border: none
+}
+
+div.input-group {
+  border: 1px solid $themecolour2;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+}
+div.col-auto .input-group-prepend{
+  border: none;
+}
+#searchJob, #searchWhere{
+  border: none;
+
+}
+
+#smallerscreen{
+  display: none;
+  @media screen and (max-width: 992px)
+  { 
+display: contents;
+  }
+
+}
+#largerscreen{
+display: contents;
+@media screen and (max-width: 992px)
+{ 
+display: none;
+}
+}
+
+//   @import '../../../node_modules/bootstrap/scss/bootstrap.scss'
+  
+
