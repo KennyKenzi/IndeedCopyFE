@@ -18,7 +18,7 @@ img.navbar-brand{
     max-width: 110px;
   }
 }
-.app__navbar-nogap {
+.app__navbar-hr-nogap {
     padding: 0px;
     margin: 0px;    
     @media screen and (max-width: 992px) {
@@ -88,67 +88,74 @@ div.app__navbar-navend div{
   }
 
  }
+ .app__navbarsearch{
+  padding:4rem 6rem 2rem 6rem;
+  @media screen and (max-width: 992px){ 
 
- .app__navbar-smallscreen_searchbar{
- // display: none;
-    @media screen and (max-width: 992px)
-    { 
-        display: flex;
-        margin-left: auto;
-        min-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
+    padding-top: 1.2rem;
+    padding-left: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-right: 0.7rem;
+ }
 
-.app__navbar-smallscreen_searchform{
-  justify-content: center;
-  padding-top: 2rem;
-  width: 100%;
-}.form-row .col-auto{
-  min-height: 3rem;
-  //margin-top: 1.5rem;
+ @media screen and (max-width: 767px)
+ { 
+  padding-bottom: 0;
+ }
+}
+ .app__navbarsearch-joblink{
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: large;
 
-}
-button.btn.searchform_item{
-  width: 100%;
-  min-height: 3rem;
-  background-color: $themecolour3;
-}
-span.input-group-text {
-  background-color: white;
-  border: none
-}
+ }
 
-div.input-group {
-  border: 1px solid $themecolour2;
-  margin-top: 1.5rem;
-  border-radius: 6px;
-}
-div.col-auto .input-group-prepend{
-  border: none;
-}
-#searchJob, #searchWhere{
-  border: none;
-
-}
-
-#smallerscreen{
-  display: none;
+.app__navbarsearch-joblink-link {
+  text-decoration: none;
+  color: $themecolour3;
+ }
+ .app__navbarsearch-inputfield .col-lg-auto{
   @media screen and (max-width: 992px)
   { 
-display: contents;
+    display: grid;
+  }
+ }
+
+
+ button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg{
+  background-color: $themecolour3;
+}
+
+
+.app__navbar-hr-thickgap {
+  margin: 0;
+  @media screen and (max-width: 767px) {
+
+        top: 20px;
+        border: none;
+        height: 10px;
+        background:$themecolour2;
+    
+  }
+}
+@media screen and (max-width: 992px)
+{ 
+  .app__navbarsearch-joblink{
+    padding-bottom: 1.9rem;
+    padding-top:1.9rem;
   }
 
 }
-#largerscreen{
-display: contents;
-@media screen and (max-width: 992px)
+@media screen and (max-width: 767px)
 { 
-display: none;
+  .app__navbarsearch-inputfield{
+     padding-bottom: 1.5rem;
+  }
+  .app__navbarsearch-joblink{
+    padding-bottom: 0.5rem;
+    padding-top: 0.8rem;
+  }
 }
-}
-
 //   @import '../../../node_modules/bootstrap/scss/bootstrap.scss'
   
 

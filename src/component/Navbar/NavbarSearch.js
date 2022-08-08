@@ -11,83 +11,24 @@ export default class NavbarSearch extends Component {
 
 
     return (
-
-<>
-                <div id='largerscreen'>
-
-                                    
-                        <form class="app__navbar-smallscreen_searchform row" >
-
-                        <div class="form-row col-auto">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text " id="searchJobPrepend"><b>What</b></span>
-                                    </div>
-                                    <input type="text" className="form-control" id="searchJob" placeholder="Job title, keywords, or company" aria-describedby="validationTooltipUsernamePrepend" ></input>
-                                    <i class="bi bi-search"></i>
-                                </div>
+            <div class = "app__navbarsearch">
+                <form className='app__navbarsearch-inputfield'>
+                    <div class="row gy-4">
+                        <div class="col-lg">
+                            <input type="text" class="form-control form-control-lg" placeholder="What"/>
                         </div>
-
-                        <div class="form-row  col-auto">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend"> 
-                                        <span class="input-group-text" id="searchWWherePrepend"><b>Where</b></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="searchWhere" placeholder="City, state, zip code, or 'remote'" aria-describedby="validationTooltipUsernamePrepend"></input>
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
+                        <div class="col-lg">
+                            <input type="text" class="form-control form-control-lg" placeholder="Where"/>
                         </div>
-                        <div class="form-row col-auto">
-                            <div className='input-group' id='buttonContain'>
-                                <button class="btn btn-primary searchform_item " type="submit"><b>Find Jobs</b></button> 
-                            </div>
-                        </div>
-
-
-                        </form>
-
-
-                </div>
-
-
-
-                <div id ="smallerscreen">
-                    <form class="app__navbar-smallscreen_searchform" >
-                    
-                    <div class="form-row">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text  col-auto " id="searchJobPrepend"><b>What</b></span>
-                                </div>
-                                <input type="text" className="form-control col-auto" id="searchJob" placeholder="Job title, keywords, or company" aria-describedby="validationTooltipUsernamePrepend" ></input>
-                                <i class="bi bi-search"></i>
-                            </div>
-                    </div>
-
-                    <div class="form-row ">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend"> 
-                                    <span class="input-group-text  col-auto " id="searchWWherePrepend"><b>Where</b></span>
-                                </div>
-                                <input type="text" class="form-control col-auto" id="searchWhere" placeholder="City, state, zip code, or 'remote'" aria-describedby="validationTooltipUsernamePrepend"></input>
-                                <i class="bi bi-geo-alt-fill"></i>
-                            </div>
-                    </div>
-                    <div class="form-row">
-                        <div className='input-group' id='buttonContain'>
-                            <button class="btn btn-primary searchform_item " type="submit"><b>Find Jobs</b></button> 
+                        <div class="col-lg-auto">
+                            <button type="submit" class=" app__navbarsearch-inputfield-searchform-btn btn btn-lg btn-primary" placeholder="Last name"> <span style={{fontSize:"smaller"}}><b>Find Jobs</b></span></button>
                         </div>
                     </div>
-
-
-                
                 </form>
-              
-             </div>
-
-        </>
+                <div className='app__navbarsearch-joblink'>
+                    Employers: <a href="#postJob" className='app__navbarsearch-joblink-link'><b>Post a job</b></a>
+                </div>
+            </div>
     )
   }
 

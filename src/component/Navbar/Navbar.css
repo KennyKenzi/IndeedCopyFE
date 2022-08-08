@@ -11,12 +11,12 @@ img.navbar-brand {
   }
 }
 
-.app__navbar-nogap {
+.app__navbar-hr-nogap {
   padding: 0px;
   margin: 0px;
 }
 @media screen and (max-width: 992px) {
-  .app__navbar-nogap {
+  .app__navbar-hr-nogap {
     display: none;
   }
 }
@@ -77,65 +77,68 @@ div.app__navbar-navend div {
     display: none;
   }
 }
+.app__navbarsearch {
+  padding: 4rem 6rem 2rem 6rem;
+}
 @media screen and (max-width: 992px) {
-  .app__navbar-smallscreen_searchbar {
-    display: flex;
-    margin-left: auto;
-    min-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .app__navbarsearch {
+    padding-top: 1.2rem;
+    padding-left: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-right: 0.7rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .app__navbarsearch {
+    padding-bottom: 0;
   }
 }
 
-.app__navbar-smallscreen_searchform {
-  justify-content: center;
-  padding-top: 2rem;
-  width: 100%;
+.app__navbarsearch-joblink {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: large;
 }
 
-.form-row .col-auto {
-  min-height: 3rem;
+.app__navbarsearch-joblink-link {
+  text-decoration: none;
+  color: #2557a7;
 }
 
-button.btn.searchform_item {
-  width: 100%;
-  min-height: 3rem;
+@media screen and (max-width: 992px) {
+  .app__navbarsearch-inputfield .col-lg-auto {
+    display: grid;
+  }
+}
+
+button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg {
   background-color: #2557a7;
 }
 
-span.input-group-text {
-  background-color: white;
-  border: none;
+.app__navbar-hr-thickgap {
+  margin: 0;
 }
-
-div.input-group {
-  border: 1px solid rgb(139, 139, 139);
-  margin-top: 1.5rem;
-  border-radius: 6px;
-}
-
-div.col-auto .input-group-prepend {
-  border: none;
-}
-
-#searchJob, #searchWhere {
-  border: none;
-}
-
-#smallerscreen {
-  display: none;
-}
-@media screen and (max-width: 992px) {
-  #smallerscreen {
-    display: contents;
+@media screen and (max-width: 767px) {
+  .app__navbar-hr-thickgap {
+    top: 20px;
+    border: none;
+    height: 10px;
+    background: rgb(139, 139, 139);
   }
 }
 
-#largerscreen {
-  display: contents;
-}
 @media screen and (max-width: 992px) {
-  #largerscreen {
-    display: none;
+  .app__navbarsearch-joblink {
+    padding-bottom: 1.9rem;
+    padding-top: 1.9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .app__navbarsearch-inputfield {
+    padding-bottom: 1.5rem;
+  }
+  .app__navbarsearch-joblink {
+    padding-bottom: 0.5rem;
+    padding-top: 0.8rem;
   }
 }/*# sourceMappingURL=Navbar.css.map */

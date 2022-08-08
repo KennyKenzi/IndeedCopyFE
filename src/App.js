@@ -13,10 +13,10 @@ export default class App extends Component {
     return (
       <div>
           <Navbar></Navbar>
-          <hr className='app__navbar-nogap'/>
-          <div class="app__navbar-smallscreen_searchbar" >
-              <NavbarSearch></NavbarSearch>
-          </div>
+          <hr className='app__navbar-hr-nogap'/>
+         <NavbarSearch></NavbarSearch>
+         <hr className='app__navbar-hr-thickgap'/>
+
           {/* <div class="app__navbar-smallscreen_searchbar" >
               <NavTest></NavTest>
           </div> */}
