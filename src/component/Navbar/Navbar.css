@@ -35,7 +35,7 @@ ul.navbar-nav.mr-auto li {
 }
 
 .nav-item a {
-  color: rgb(48, 47, 47);
+  color: rgba(22, 22, 22, 0.8);
 }
 
 .navbar-nav.mr-auto li:hover {
@@ -59,13 +59,13 @@ ul.navbar-nav.mr-auto li {
   box-sizing: border-box;
   top: 50%;
   right: 2px;
-  color: rgb(48, 47, 47);
+  color: rgba(22, 22, 22, 0.8);
 }
 
 div.app__navbar-navend div {
   width: 1px;
   height: 30px;
-  background-color: rgb(48, 47, 47);
+  background-color: rgba(22, 22, 22, 0.8);
 }
 
 @media screen and (max-width: 992px) {
@@ -94,10 +94,24 @@ div.app__navbar-navend div {
   }
 }
 
+#inputGroup-sizing-lg-1, #inputGroup-sizing-lg-2 {
+  background-color: white;
+  border-right: none;
+  font-size: medium;
+  font-weight: bold;
+  color: rgba(22, 22, 22, 0.8);
+  border-color: rgb(110, 110, 110);
+}
+
 .app__navbarsearch-joblink {
   text-align: center;
   padding-top: 0.5rem;
   font-size: large;
+}
+@media screen and (max-width: 480px) {
+  .app__navbarsearch-joblink {
+    display: none;
+  }
 }
 
 .app__navbarsearch-joblink-link {
@@ -109,6 +123,24 @@ div.app__navbar-navend div {
   .app__navbarsearch-inputfield .col-lg-auto {
     display: grid;
   }
+}
+
+.app__navbarsearch-inputfield-individual.form-control {
+  border-left: none;
+  border-color: rgb(110, 110, 110);
+  font-size: medium;
+}
+
+::-moz-placeholder {
+  font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-size: 1rem;
 }
 
 button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg {
@@ -123,7 +155,7 @@ button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg {
     top: 20px;
     border: none;
     height: 10px;
-    background: rgb(139, 139, 139);
+    background: rgb(110, 110, 110);
   }
 }
 

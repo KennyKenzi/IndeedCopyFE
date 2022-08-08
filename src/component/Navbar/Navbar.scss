@@ -2,8 +2,8 @@
 // // $navbar-padding-y: 0px;
 // // $navbar-brand-padding-y: 0px;
 //  $navbar-padding-y: 0px;
-$themecolour1: rgb(48, 47, 47);
-$themecolour2: rgb(139, 139, 139);
+$themecolour1: rgba(22, 22, 22, 0.8);
+$themecolour2: rgb(110, 110, 110);
 $themecolour3: #2557a7;
 
 
@@ -103,10 +103,23 @@ div.app__navbar-navend div{
   padding-bottom: 0;
  }
 }
+#inputGroup-sizing-lg-1, #inputGroup-sizing-lg-2{
+
+  background-color: white;
+  border-right: none;
+  font-size: medium;
+  font-weight:bold;
+  color: $themecolour1;
+  border-color: $themecolour2;
+}
+
  .app__navbarsearch-joblink{
   text-align: center;
   padding-top: 0.5rem;
   font-size: large;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 
  }
 
@@ -120,6 +133,16 @@ div.app__navbar-navend div{
     display: grid;
   }
  }
+
+.app__navbarsearch-inputfield-individual.form-control{
+  border-left: none;
+  border-color: $themecolour2;
+  font-size: medium;
+
+}::placeholder {
+  font-size: 1rem;
+}
+
 
 
  button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg{
@@ -156,6 +179,8 @@ div.app__navbar-navend div{
     padding-top: 0.8rem;
   }
 }
+
+
 //   @import '../../../node_modules/bootstrap/scss/bootstrap.scss'
   
 

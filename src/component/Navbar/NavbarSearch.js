@@ -15,10 +15,16 @@ export default class NavbarSearch extends Component {
                 <form className='app__navbarsearch-inputfield'>
                     <div class="row gy-4">
                         <div class="col-lg">
-                            <input type="text" class="form-control form-control-lg" placeholder="What"/>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text" id="inputGroup-sizing-lg-1">What</span>
+                                <input type="text" class="app__navbarsearch-inputfield-individual form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder='Job title, keywords, or company'/>
+                            </div>
                         </div>
                         <div class="col-lg">
-                            <input type="text" class="form-control form-control-lg" placeholder="Where"/>
+                        <div class="input-group input-group-lg">
+                                <span class="input-group-text" id="inputGroup-sizing-lg-2">Where</span>
+                                <input type="text" class="app__navbarsearch-inputfield-individual form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder='City, state, zip code, or "remote"'/>
+                            </div>
                         </div>
                         <div class="col-lg-auto">
                             <button type="submit" class=" app__navbarsearch-inputfield-searchform-btn btn btn-lg btn-primary" placeholder="Last name"> <span style={{fontSize:"smaller"}}><b>Find Jobs</b></span></button>
