@@ -1,0 +1,38 @@
+$themecolour1: rgba(22, 22, 22, 0.8);
+$themecolour2: rgb(110, 110, 110);
+$themecolour3: #2557a7;
+
+
+.app__tabs{
+  
+    li, li:hover{
+        padding: 0;
+        font-size:x-large;
+       a{
+        width: 15rem;
+        text-align: center;
+        color: $themecolour1;
+       } 
+    }
+    a:hover, a.active{
+        border-bottom-style: solid;
+        border-bottom-color: $themecolour3;
+        font-weight: bold;
+        color: $themecolour1;
+    }
+
+}
+
+
+
+
+//screen width 3
+@media screen and (max-width: 650px) {
+    .app__tabs{
+        li{
+            padding: 0 5rem;
+            font-size:larger;  
+        }
+    }
+}
+

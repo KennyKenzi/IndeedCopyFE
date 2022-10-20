@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Navbar.css';
+import '../../css/Navbar.css'
 
 export default class NavbarSearch extends Component {
 

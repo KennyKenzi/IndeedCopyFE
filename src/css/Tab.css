@@ -1,0 +1,22 @@
+.app__tabs li, .app__tabs li:hover {
+  padding: 0;
+  font-size: x-large;
+}
+.app__tabs li a, .app__tabs li:hover a {
+  width: 15rem;
+  text-align: center;
+  color: rgba(22, 22, 22, 0.8);
+}
+.app__tabs a:hover, .app__tabs a.active {
+  border-bottom-style: solid;
+  border-bottom-color: #2557a7;
+  font-weight: bold;
+  color: rgba(22, 22, 22, 0.8);
+}
+
+@media screen and (max-width: 650px) {
+  .app__tabs li {
+    padding: 0 5rem;
+    font-size: larger;
+  }
+}

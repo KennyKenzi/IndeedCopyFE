@@ -77,6 +77,9 @@ div.app__navbar-navend div{
 
 @media screen and (max-width: 992px)
 { 
+  .app__navbar-smallscreen{
+    display: block;
+  }
   div.app__navbar-navend{
     flex-direction: row;
     margin-left: auto;
@@ -88,6 +91,7 @@ div.app__navbar-navend div{
   }
 
  }
+
  .app__navbarsearch{
   padding:4rem 6rem 2rem 6rem;
   @media screen and (max-width: 992px){ 
@@ -97,12 +101,11 @@ div.app__navbar-navend div{
     padding-bottom: 0.7rem;
     padding-right: 0.7rem;
  }
-
  @media screen and (max-width: 767px)
  { 
   padding-bottom: 0;
  }
-}
+ }
 #inputGroup-sizing-lg-1, #inputGroup-sizing-lg-2{
 
   background-color: white;
@@ -127,12 +130,34 @@ div.app__navbar-navend div{
   text-decoration: none;
   color: $themecolour3;
  }
- .app__navbarsearch-inputfield .col-lg-auto{
+ .app__navbarsearch-inputfield{
+    max-width: 70%;
+    margin:auto;
+ }
+ form.app__navbarsearch-inputfield .col-lg{
+  @media screen and (min-width: 767px){
+    flex: none;
+  }
+  @media screen and (min-width: 992px)
+  { 
+    flex: 1 0;
+  }
+ }
+
+ form.app__navbarsearch-inputfield .col-lg-auto{
+  @media screen and (min-width: 767px)
+  { width: 100%; }
   @media screen and (max-width: 992px)
   { 
     display: grid;
   }
+  @media screen and (min-width: 992px)
+  { 
+    flex: 0 0 auto;
+    width: auto;
  }
+
+}
 
 .app__navbarsearch-inputfield-individual.form-control{
   border-left: none;
@@ -161,26 +186,40 @@ div.app__navbar-navend div{
     
   }
 }
+
 @media screen and (max-width: 992px)
 { 
   .app__navbarsearch-joblink{
     padding-bottom: 1.9rem;
     padding-top:1.9rem;
   }
-
+  ul.navbar-nav.mr-auto.nav-start{
+    display: none;
+   }
 }
+
 @media screen and (max-width: 767px)
 { 
   .app__navbarsearch-inputfield{
      padding-bottom: 1.5rem;
+
   }
   .app__navbarsearch-joblink{
     padding-bottom: 0.5rem;
     padding-top: 0.8rem;
   }
+  button.navbar-toggler.ctoggle .navbar-expand-lg{
+    display: block;
+  }
 }
 
+@media screen and (max-width: 992px)
+{ 
+  .navbar-expand-lg .navbar-toggler.ctoggle {
+    display:flex;
+}
 
-//   @import '../../../node_modules/bootstrap/scss/bootstrap.scss'
+}
+
   
 

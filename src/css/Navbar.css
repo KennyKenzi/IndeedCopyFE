@@ -69,6 +69,9 @@ div.app__navbar-navend div {
 }
 
 @media screen and (max-width: 992px) {
+  .app__navbar-smallscreen {
+    display: block;
+  }
   div.app__navbar-navend {
     flex-direction: row;
     margin-left: auto;
@@ -119,9 +122,36 @@ div.app__navbar-navend div {
   color: #2557a7;
 }
 
+.app__navbarsearch-inputfield {
+  max-width: 70%;
+  margin: auto;
+}
+
+@media screen and (min-width: 767px) {
+  form.app__navbarsearch-inputfield .col-lg {
+    flex: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  form.app__navbarsearch-inputfield .col-lg {
+    flex: 1 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  form.app__navbarsearch-inputfield .col-lg-auto {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 992px) {
-  .app__navbarsearch-inputfield .col-lg-auto {
+  form.app__navbarsearch-inputfield .col-lg-auto {
     display: grid;
+  }
+}
+@media screen and (min-width: 992px) {
+  form.app__navbarsearch-inputfield .col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
   }
 }
 
@@ -164,6 +194,9 @@ button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg {
     padding-bottom: 1.9rem;
     padding-top: 1.9rem;
   }
+  ul.navbar-nav.mr-auto.nav-start {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .app__navbarsearch-inputfield {
@@ -173,4 +206,12 @@ button.app__navbarsearch-inputfield-searchform-btn.btn.btn-lg {
     padding-bottom: 0.5rem;
     padding-top: 0.8rem;
   }
-}/*# sourceMappingURL=Navbar.css.map */
+  button.navbar-toggler.ctoggle .navbar-expand-lg {
+    display: block;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-expand-lg .navbar-toggler.ctoggle {
+    display: flex;
+  }
+}
