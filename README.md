@@ -1,3 +1,9 @@
+# Personal Notes
+Incomplete/Abandoned Project. 
+Started out one way with regular "use-state", then attempted to implement Contex API/Use Reducer halfway and never finished
+May attempt to correct in future or just start afresh.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
