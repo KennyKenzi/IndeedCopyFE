@@ -21,13 +21,13 @@ $themecolour3: #2557a7;
   .row.mainbody__container-row{
     max-width: 70rem;
     margin: auto;
-    border-style: solid
+    // border-style: solid
   
   }
   .row.mainbody__container-row .col{
     // background-color: grey;
-    border-style: dashed;
-    border-color: rgb(44, 35, 210);
+    // border-style: dashed;
+    // border-color: rgb(44, 35, 210);
   } 
   
     @include media-breakpoint-down(md) {

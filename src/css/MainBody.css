@@ -5,12 +5,6 @@
 .row.mainbody__container-row {
   max-width: 70rem;
   margin: auto;
-  border-style: solid;
-}
-
-.row.mainbody__container-row .col {
-  border-style: dashed;
-  border-color: rgb(44, 35, 210);
 }
 
 @media (max-width: 649.98px) {
