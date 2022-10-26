@@ -1,0 +1,76 @@
+.mainbody__container.container-fluid {
+  background-color: #FAF9F8;
+}
+
+.row.mainbody__container-row {
+  max-width: 70rem;
+  margin: auto;
+  border-style: solid;
+}
+
+.row.mainbody__container-row .col {
+  border-style: dashed;
+  border-color: rgb(44, 35, 210);
+}
+
+@media (max-width: 649.98px) {
+  .row.mainbody__container-row .col.main__column2 {
+    display: none;
+  }
+}
+.row [class="col main__column2 mx-3 "] {
+  transition: all 0.5s ease-in-out;
+}
+
+.input.jobtype {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #E4F7E6;
+  color: #1F662C;
+}
+
+ul .card-text {
+  list-style-type: circle;
+}
+
+.mainbody__jobdescription-container {
+  background-color: white;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  margin-bottom: 0.3rem;
+  box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgba(130, 129, 129, 0.1);
+}
+
+button.text-decoration-none.text-reset.position-absolute {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  opacity: 0;
+}
+
+button.mainbody__jobdescription-applybtn {
+  background-color: #2557a7;
+  font-weight: bold;
+  flex-shrink: 3;
+}
+
+.bi.bi-heart {
+  background-color: #D4D2D0;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  padding: 0.3rem 0.5rem;
+  display: block;
+}
+
+.mainbody__jobdescription-jobdetails.container {
+  background-color: white;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.mainbody__jobdescription {
+  border-style: solid;
+  border-radius: 0.375rem;
+  border-width: thin;
+  border-color: rgb(210, 210, 210);
+}

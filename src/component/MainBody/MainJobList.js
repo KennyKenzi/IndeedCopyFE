@@ -1,46 +1,41 @@
-import React from 'react'
-import { fakedata } from '../../config/randomData'
+import React, {useContext} from 'react'
+import{ MainContext } from '../../component/MainBody/MainState'
 
 
 
 const MainJobList=()=>{
 
-const sortJobType = (arr)=>{
-    if(arr.length>1){
-        return `${arr[0]} +1`
-    }else{
-        console.log(`${arr[1]}`)
-        return `${arr[0]}`
-    }
-}
+ 
 
-const calculateDaysPosted =(datePosted)=>{
-    const today = new Date();
-    const postedDate = new Date(datePosted)
-    const difference = (today.getTime() - postedDate.getTime())/(1000*3600*24)
-    console.log(today)
-    console.log(postedDate)
-    console.log(difference)
+const mainContext = useContext(MainContext)
 
-    return difference.toFixed(0)
-}
+const {jobData, sortJobType, calculateDaysPosted,  selectJob} = mainContext
+
+
+
 
   return (
 
     <div className='container-fluid p-0'>
-
-        {fakedata.map(data => (
-            
-            <div className='card my-3 joblist p-3' key={data.id}>
+        
+        {jobData.map((data, i) => (  
+            <div className='card my-3 joblist p-3 position-relative' key={i}>
+                <button  id={data.id} onClick={selectJob} className='text-decoration-none text-reset position-absolute'> </button> 
                 <div className="card-body p-0">
+                    <div className=''>
+                        <small>new</small>
+                        <i className="bi bi-three-dots-vertical " style={{float:"right"}}></i>
+                    </div>
                     <h5 className="card-title" href="/">{data.jobName}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{data.company}</h6>
                     <h6 className="card-subtitle mb-2 text-muted">{`${data.state}, ${data.country}`}</h6>
                     <p className='input jobtype'>{sortJobType(data.jobType)}</p>
                     <p>{data.numberOfPositions > 1 ? "Hiring multiple candidates" :""}</p>
                     <ul>
-                    <li className="card-text">Some quick example text to build on the card title .</li>
-                    <li className="card-text">Sard title and make up the bulk of the card's content.</li>
+                        {data.requirements.map((el, i) => (
+                            <li className="card-text"key={i}>{el}</li>
+                        ))}
+
                     </ul>
                     <small>
                         <div style={{display: "flex"}} className="">
@@ -49,8 +44,11 @@ const calculateDaysPosted =(datePosted)=>{
                         </div> 
                     </small>
                 </div>
+              
             </div>
+            
         ))}
+        
     </div>
   )
 }

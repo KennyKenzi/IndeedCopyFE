@@ -7,6 +7,7 @@ import MainBody from './component/MainBody/MainContainer'
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.scss';
+import MainState from './component/MainBody/MainState';
 
 
 
@@ -15,12 +16,15 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <Navbar></Navbar>
-          <hr className='app__navbar-hr-nogap'/>
-          <NavbarSearch></NavbarSearch>
-          <hr className='app__navbar-hr-thickgap'/>
-          <Tab></Tab>
-          <MainBody></MainBody>
+        
+            <Navbar/>
+            <hr className='app__navbar-hr-nogap'/>
+            <NavbarSearch/>
+            <hr className='app__navbar-hr-thickgap'/>
+            <Tab/>
+          <MainState>
+            <MainBody></MainBody>
+          </MainState>
       </div>
 
     )
