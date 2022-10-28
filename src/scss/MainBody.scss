@@ -24,11 +24,11 @@ $themecolour3: #2557a7;
     // border-style: solid
   
   }
-  .row.mainbody__container-row .col{
-    // background-color: grey;
-    // border-style: dashed;
-    // border-color: rgb(44, 35, 210);
-  } 
+  // .row.mainbody__container-row .col{
+  //   // background-color: grey;
+  //   // border-style: dashed;
+  //   // border-color: rgb(44, 35, 210);
+  // } 
   
     @include media-breakpoint-down(md) {
         .row.mainbody__container-row .col.main__column2{
@@ -38,6 +38,7 @@ $themecolour3: #2557a7;
 
 .row [class='col main__column2 mx-3 '] {
     transition: all 0.5s ease-in-out;
+    // height: 100%;
 }
 .input.jobtype {
     width: fit-content;
@@ -61,11 +62,16 @@ button.text-decoration-none.text-reset.position-absolute{
   width: -webkit-fill-available;
     height: -webkit-fill-available;
     opacity: 0;
+    // :hover{
+    //   border-style: solid;
+    //   border-radius: 0.375rem;
+    //   border-width: thin;
+    //   border-color: $themecolour3;
+    // }
 }
 button.mainbody__jobdescription-applybtn{
   background-color: $themecolour3;
   font-weight: bold;
-  flex-shrink: 3;
 }
 .bi.bi-heart{
   background-color: #D4D2D0;
@@ -79,10 +85,50 @@ button.mainbody__jobdescription-applybtn{
   background-color: white;
   border-bottom-left-radius: 0.375rem ;
   border-bottom-right-radius: 0.375rem;
+  max-height: 45rem;
 }
 .mainbody__jobdescription{
   border-style: solid;
   border-radius: 0.375rem;
   border-width: thin;
+  border-color: rgb(210, 210, 210);
+}
+div.card.my-3.joblist.p-3.position-relative:active{
+
+    border-style: solid;
+    border-radius: 0.375rem;
+    border-width: thin;
+    border-color: $themecolour3;
+}
+.mainbody__container-columntwocontainer{
+  // margin-top: 10px;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 10px;
+
+}
+.jobdetailshighlight{
+background-color: #F3F2F1;;
+width: fit-content;
+color: $themecolour1;
+}
+.jobdetails-salaryName{
+  display: inline;
+  color: $themecolour1;
+}
+.mainbody__jobdescription-jobdetails-section1, 
+.mainbody__jobdescription-jobdetails-section2,
+.mainbody__jobdescription-jobdetails-section3
+{
+  border-bottom: solid;
+  border-width: thin;
+  border-color: rgb(210, 210, 210);
+}
+
+.mainbody__jobdescription-jobdetails-section4,
+.mainbody__jobdescription-jobdetails-section5
+{
+  border-bottom: solid;
+  border-width: 0.15rem;
   border-color: rgb(210, 210, 210);
 }

@@ -25,6 +25,10 @@ export default class App extends Component {
           <MainState>
             <MainBody></MainBody>
           </MainState>
+          <hr/>
+          <div className='text-center'>
+            End of page
+          </div>
       </div>
 
     )

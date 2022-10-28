@@ -45,7 +45,6 @@ button.text-decoration-none.text-reset.position-absolute {
 button.mainbody__jobdescription-applybtn {
   background-color: #2557a7;
   font-weight: bold;
-  flex-shrink: 3;
 }
 
 .bi.bi-heart {
@@ -60,11 +59,54 @@ button.mainbody__jobdescription-applybtn {
   background-color: white;
   border-bottom-left-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
+  max-height: 45rem;
 }
 
 .mainbody__jobdescription {
   border-style: solid;
   border-radius: 0.375rem;
   border-width: thin;
+  border-color: rgb(210, 210, 210);
+}
+
+div.card.my-3.joblist.p-3.position-relative:active {
+  border-style: solid;
+  border-radius: 0.375rem;
+  border-width: thin;
+  border-color: #2557a7;
+}
+
+.mainbody__container-columntwocontainer {
+  margin-bottom: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.jobdetailshighlight {
+  background-color: #F3F2F1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgba(22, 22, 22, 0.8);
+}
+
+.jobdetails-salaryName {
+  display: inline;
+  color: rgba(22, 22, 22, 0.8);
+}
+
+.mainbody__jobdescription-jobdetails-section1,
+.mainbody__jobdescription-jobdetails-section2,
+.mainbody__jobdescription-jobdetails-section3 {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: rgb(210, 210, 210);
+}
+
+.mainbody__jobdescription-jobdetails-section4,
+.mainbody__jobdescription-jobdetails-section5 {
+  border-bottom: solid;
+  border-width: 0.15rem;
   border-color: rgb(210, 210, 210);
 }

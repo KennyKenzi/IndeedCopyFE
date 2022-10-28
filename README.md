@@ -1,3 +1,7 @@
+# SUMMARY
+Attempting to recreate the Indeed Web App FRONTEND from scratch.
+I am currently using react and bootstrap for the project with ContextAPI/useReducer for state management.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
