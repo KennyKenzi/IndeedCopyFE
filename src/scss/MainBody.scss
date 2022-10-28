@@ -1,14 +1,15 @@
 
-@import '../../node_modules//bootstrap/scss/mixins';
+// @import '../../node_modules//bootstrap/scss/mixins';
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 650px,
-  lg: 767px,
-  xl: 992px,
-  xxl: 1200px,
-);
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 480px,
+//   md: 650px,
+//   ts: 700px,
+//   lg: 767px,
+//   xl: 992px,
+//   xxl: 1200px, 
+// );
 $themecolour1: rgba(22, 22, 22, 0.8);
 $themecolour2: rgb(110, 110, 110);
 $themecolour3: #2557a7;
@@ -30,7 +31,7 @@ $themecolour3: #2557a7;
   //   // border-color: rgb(44, 35, 210);
   // } 
   
-    @include media-breakpoint-down(md) {
+    @media screen and (max-width: 650px) {
         .row.mainbody__container-row .col.main__column2{
             display: none;
         }

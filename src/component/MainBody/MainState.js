@@ -85,7 +85,7 @@ const mainReducer = (state, action)=>{
         }
 
         
-        const styleSwitch=((arg)=>{
+        const styleSwitch=(arg)=>{
 
             if (state.windowSize.innerWidth<650 && state.isJobClicked){
                 return arg
@@ -93,8 +93,9 @@ const mainReducer = (state, action)=>{
             }else{
                 return""
             }
+
             
-        })
+        }
 
         const selectJob=(e)=>{
             e.preventDefault()
