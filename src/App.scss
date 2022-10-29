@@ -1,9 +1,15 @@
 
 // @import '../node_modules//bootstrap/scss/mixins';
 
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
 @import './scss/Navbar.scss';
 @import './scss/Tab.scss';
 @import './scss/MainBody.scss';
+
 
 
 

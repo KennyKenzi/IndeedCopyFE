@@ -13,9 +13,8 @@ const {jobData, sortJobType, calculateDaysPosted,  selectJob} = mainContext
 
 
 
-
   return (
-
+        
     <div className='container-fluid p-0'>
         
         {jobData.map((data, i) => (  
@@ -30,13 +29,20 @@ const {jobData, sortJobType, calculateDaysPosted,  selectJob} = mainContext
                     <h6 className="card-subtitle mb-2 text-muted">{data.company}</h6>
                     <h6 className="card-subtitle mb-2 text-muted">{`${data.state}, ${data.country}`}</h6>
                     <p className='input jobtype'>{sortJobType(data.jobType)}</p>
-                    <p>{data.numberOfPositions > 1 ? "Hiring multiple candidates" :""}</p>
-                    <ul>
-                        {data.requirements.map((el, i) => (
-                            <li className="card-text"key={i}>{el}</li>
-                        ))}
+                    <p>{data.numberOfPositions? (data.numberOfPositions > 1 ? "Hiring multiple candidates" :""):""}</p>
+                    
+                        {data.requirements.length>0?(
+                            data.requirements.length>=2 ? (
+                            <ul style={{fontSize: "0.9rem"}}>     
+                                <li className="card-text">{data.requirements[0]}</li>
+                                <li className="card-text">{data.requirements[1]}</li>
+                            </ul>
+                        ) : (
+                            <ul><li className="card-text">{data.requirements[0]}</li></ul>    
+                        )
+                        ):""}
 
-                    </ul>
+                    
                     <small>
                         <div style={{display: "flex"}} className="">
                             <div href="#" className="mx-2">{`Posted ${calculateDaysPosted(data.datePosted)} days ago.`}</div>

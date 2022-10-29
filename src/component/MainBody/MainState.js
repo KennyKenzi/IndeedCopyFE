@@ -49,20 +49,24 @@ const mainReducer = (state, action)=>{
 
         useEffect(() => {
             const handleWindowResize=()=> {
-              setWindowSize();
+              setWindowSize()
             }
             window.addEventListener('resize', handleWindowResize);
+
             return () => {
               window.removeEventListener('resize', handleWindowResize);
             };
-        }, []);
+        });
 
         const setWindowSize =()=> {
-            const {innerWidth, innerHeight} = window;  
+            const {innerWidth, innerHeight} = window; 
             dispatch({
                 type: "SET_SCREEN_SIZE",
                 payload:{innerWidth, innerHeight}
             })
+            if(innerWidth>650 ){
+                jobClicked(false)
+            }
         }   
 
         const sortJobType = (arr)=>{
@@ -76,30 +80,15 @@ const mainReducer = (state, action)=>{
             }
         }
 
-        const jobClicked = ()=>{
-            
+        const jobClicked = (arg)=>{     
             dispatch({
                 type: 'CLICK_JOB',
-                payload: true
+                payload: arg
             })
-        }
-
-        
-        const styleSwitch=(arg)=>{
-
-            if (state.windowSize.innerWidth<650 && state.isJobClicked){
-                return arg
-                
-            }else{
-                return""
-            }
-
-            
         }
 
         const selectJob=(e)=>{
             e.preventDefault()
-            // setScreenWidth()
             const job = state.jobList.filter(jobL => jobL.id === e.target.id)
             try {
                 dispatch({
@@ -110,7 +99,7 @@ const mainReducer = (state, action)=>{
             } catch (error) {
                 console.log(error)
             }
-            jobClicked()
+            jobClicked(true)
 
         }
         
@@ -131,9 +120,10 @@ const mainReducer = (state, action)=>{
         sortJobType,
         calculateDaysPosted,
         selectJob,
-        styleSwitch,
-        screenSize: state.windowSize,
-        selectedJob: state.selectedJobData
+        // styleSwitch,
+        windowSize: state.windowSize,
+        selectedJob: state.selectedJobData,
+        isJobClicked: state.isJobClicked
     }}>    
         {props.children}
     </MainContext.Provider>

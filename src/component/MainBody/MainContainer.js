@@ -8,7 +8,18 @@ import { MainContext } from './MainState'
  const MainContainer =()=> {
     const mainContext = useContext(MainContext)
 
-    const {styleSwitch} = mainContext
+    const {windowSize, isJobClicked} = mainContext
+
+            const styleSwitch=(arg)=>{
+
+            if (windowSize.innerWidth<650 && isJobClicked){
+               
+                return arg
+            }else{
+                return ""
+            }
+
+        }
 
 
 

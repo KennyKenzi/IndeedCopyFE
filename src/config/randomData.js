@@ -17,6 +17,17 @@ export const fakedata = [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Purus faucibus ornare suspendisse sed nisi. ",
         ],
+        benefits:["annual paid leave, free training"],
+        additionalJobDetails:[
+            {
+                "Title1":[
+                ],
+                "Title2":[
+                ],
+                "Title3":[
+                ] 
+            }
+        ],
         salaryRange:"$30,000 - $40,000",
         datePosted: "10-15-2022",
         locationPosted: "Brick, NJ"
@@ -31,11 +42,22 @@ export const fakedata = [
         website: "www.google.com",
         jobType: ["Full-time","Part-time", "Contract"],
         numberOfPositions: 1,
+        benefits:["Growth opportunity"],
         jobDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         requirements: [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Purus faucibus ornare suspendisse sed nisi. ",
+        ],
+        additionalJobDetails:[
+            {
+                "Title1":[
+                ],
+                "Title2":[
+                ],
+                "Title3":[
+                ] 
+            }
         ],
         salaryRange:"",
         
@@ -52,6 +74,7 @@ export const fakedata = [
             website: "www.google.com",
             jobType: ["Full-time","Part-time"],
             numberOfPositions: 1,
+            benefits:[],
             jobDescription: "Decriptionb section blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             requirements: [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at.",
@@ -59,6 +82,16 @@ export const fakedata = [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Purus faucibus ornare suspendisse sed nisi. ",
                 "Lorem ipsum dolor sit amet",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            ],
+            additionalJobDetails:[
+                {
+                    "Title1":[
+                    ],
+                    "Title2":[
+                    ],
+                    "Title3":[
+                    ] 
+                }
             ],
             salaryRange:"$40/hr",
             
@@ -75,13 +108,24 @@ export const fakedata = [
                 website: "www.google.com",
                 jobType: ["Full-time","Part-time"],
                 numberOfPositions: 1,
-                jobDescription: "Decriptionb section blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                benefits:[],
+                jobDescription: "Decription section: blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 requirements: [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at.",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Purus faucibus ornare suspendisse sed nisi. ",
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                ],
+                additionalJobDetails:[
+                    {
+                        "Title1":[
+                        ],
+                        "Title2":[
+                        ],
+                        "Title3":[
+                        ] 
+                    }
                 ],
                 salaryRange:"$40/hr",
                 

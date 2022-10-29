@@ -7,7 +7,7 @@ import { MainContext } from './MainState'
 const MainJobDescription = () => {
 
 const mainContext = useContext(MainContext)
-const {selectedJob} = mainContext
+const {selectedJob, calculateDaysPosted} = mainContext
 
 
   return (
@@ -51,11 +51,12 @@ const {selectedJob} = mainContext
     </div>  
     
     <div className='mainbody__jobdescription-jobdetails container p-0 overflow-auto'>
-        <h5 className='p-3'><b>Job Details</b></h5>
-        <div className='mainbody__jobdescription-jobdetails-section1'>
+        
+        <div className='mainbody__jobdescription-jobdetails-section1 p-4'>
+        <h5 className=''><b>Job Details</b></h5>
         {
-        selectedJob.jobType.length>0?
-        (<div className='mainbody__jobdescription-salary my-3 px-3'>
+        selectedJob.salaryRange?
+        (<div className='mainbody__jobdescription-salary my-3'>
           <i className='bi bi-cash-stack' style={{fontSize:'20px'}} ></i>
           <p className="mx-4 jobdetails-salaryName" ><small><b>Salary</b></small></p>
           <div className='mx-5 jobdetailshighlight'><small><b>{selectedJob.salaryRange}</b></small></div>
@@ -63,7 +64,7 @@ const {selectedJob} = mainContext
         }
         {
           selectedJob.jobType.length>0?
-          (<div className='mainbody__jobdescription-jobtype my-3 px-3'>
+          (<div className='mainbody__jobdescription-jobtype my-3'>
           <i className='bi bi-briefcase-fill' style={{fontSize:'20px'}} ></i>
           <p className="mx-4 jobdetails-salaryName" ><small><b>Job Type</b></small></p>
           <div className='mx-5 jobdetailshighlight'><small><b>
@@ -77,7 +78,7 @@ const {selectedJob} = mainContext
         }
         {
           selectedJob.schedule ? 
-          (<div className='mainbody__jobdescription-schedule my-3 px-3'>
+          (<div className='mainbody__jobdescription-schedule my-3 '>
           <i className='bi bi-cash-stack' style={{fontSize:'20px'}} ></i>
           <p className="mx-4 jobdetails-salaryName" ><small><b>Shift/Schedule</b></small></p>
           <div className='mx-5 jobdetailshighlight'><small><b>{selectedJob.schedule}</b></small></div>
@@ -85,17 +86,53 @@ const {selectedJob} = mainContext
         }
       </div>
 
-      <div className='mainbody__jobdescription-jobdetails-section2'>
-      <h5 className='p-3'><b>Qualifications</b></h5>
+      {
+        selectedJob.requirements.length >0?
+        (<div className='mainbody__jobdescription-requirements-section2 p-4'>
+          <h5 className=''><b>Qualifications</b></h5>
+          <ul className='my-3' style={{fontSize:"0.9em"}} >
+            {selectedJob.requirements.map((el, i) => (
+              <li className=""key={i}>{el}</li>
+            ))
+            }
+          </ul>
+        </div>   
+        ):""
+      }
+      {
+        selectedJob.benefits.length>0 ? 
+        (<div className='mainbody__jobdescription-benefits-section3 p-4'>
+          <h5 className=''><b>Benefits</b></h5>
+          
+            {
+              selectedJob.benefits.map((el, i)=>(
+                i<selectedJob.benefits.length-1?
+                <div className='mainbody__benefits-highlights'key={i}><b>{el},</b></div>:
+                <div className='mainbody__benefits-highlights'key={i}><b><small>{el}</small></b></div>
+              ))
+            } 
+          
+          
+          </div>
+        ): ""
+      }
+
+      <div className='mainbody__jobdescription-jobdescription-section4 p-4'>
+        <h5 className=''><b>Full Job Description</b></h5>
+        {selectedJob.jobDescription ? 
+          <div style={{fontSize: "0.9rem"}}>
+            <p>{selectedJob.jobDescription}</p>
+          </div> 
+        : ""}
       </div>
-      <div className='mainbody__jobdescription-jobdetails-section3'>
-      <h5 className='p-3'><b>Benefits</b></h5>
+      <div className='mainbody__jobdescription-insights-section5 p-4'>
+      <h5 className=''><b>Hiring Insights</b></h5>
+      <div className='' style={{fontSize: "0.9rem "}}>
+        <p><b>Job activity</b></p>
+        <li>Posted: {calculateDaysPosted(selectedJob.datePosted)} days ago</li>
       </div>
-      <div className='mainbody__jobdescription-jobdetails-section4'>
-      <h5 className='p-3'><b>Full Job Description</b></h5>
-      </div>
-      <div className='mainbody__jobdescription-jobdetails-section5'>
-      <h5 className='p-3'><b>Hiring Insights</b></h5>
+          
+
       </div>
       <div className='mainbody__jobdescription-jobdetails-section6'>
       <h5 className='p-3'><b>Section 6</b></h5>
