@@ -1,39 +1,53 @@
-import React, { Component } from 'react';
+import React, {useContext, useEffect} from 'react';
+import MainContext from './component/MainBody/MainState'
+import MainState from './component/MainBody/MainState';
 import Navbar from './component/Navbar/Navbar'
 import NavbarSearch from './component/Navbar/NavbarSearch';
 import NavTest from './component/Navbar/NavTest';
 import Tab from './component/Tab/Tab'
 import MainBody from './component/MainBody/MainContainer'
 
+
+
 import "bootstrap-icons/font/bootstrap-icons.css";
-import './App.scss';
-import MainState from './component/MainBody/MainState';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './css/App.css';
 
 
 
 
-export default class App extends Component {
-  render() {
+
+const App =()=> {
+
+  // const mainContext = useContext(MainContext)
+  // // const {}=  mainContext
+
+  // useEffect=(()=>{
+  //   console.log(mainContext)
+  // },[])
+
     return (
+
+     
       <div>
-        
+            <MainState>
             <Navbar/>
             <hr className='app__navbar-hr-nogap'/>
             <NavbarSearch/>
             <hr className='app__navbar-hr-thickgap'/>
             <Tab/>
-          <MainState>
-            <MainBody></MainBody>
+              <MainBody></MainBody>
+            <hr/>
+            <div className='text-center'>
+              End of page
+            
+            </div>
           </MainState>
-          <hr/>
-          <div className='text-center'>
-            End of page
-          </div>
       </div>
 
     )
-  }
+
 }
 
-
+export default App
 

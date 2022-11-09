@@ -1,5 +1,5 @@
 
-// @import '../../node_modules//bootstrap/scss/mixins';
+ @use '../custom' as *;
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -10,9 +10,7 @@
 //   xl: 992px,
 //   xxl: 1200px, 
 // );
-$themecolour1: rgba(22, 22, 22, 0.8);
-$themecolour2: rgb(110, 110, 110);
-$themecolour3: #2557a7;
+
 
 
 .mainbody__container.container-fluid{

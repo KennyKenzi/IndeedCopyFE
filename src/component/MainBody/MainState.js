@@ -1,27 +1,31 @@
 
 import React, {createContext, useReducer, useEffect} from 'react'
 import { fakedata } from '../../config/randomData' 
+import {CLICK_JOB, LOAD_SELECTED_JOBDATA, SET_SCREEN_SIZE, CLICK_TOGGLE} from '../../types'
 
 //context. Will move to new js file eventually
 export const MainContext = createContext();
 
-
-
 //mainReducer. Will move to new  js file eventually
 const mainReducer = (state, action)=>{
     switch(action.type){
-        case "CLICK_JOB":
+        case CLICK_JOB:
             return{
                 ...state, 
                 isJobClicked: action.payload,  
             }
-        case "LOAD_SELECTED_JOBDATA":
+        case CLICK_TOGGLE:
+            return{
+                ...state, 
+                istoggleClicked: action.payload,  
+            }
+        case LOAD_SELECTED_JOBDATA:
             return{
                 ...state,
                 selectedJobData: action.payload
                 
             }
-        case "SET_SCREEN_SIZE":
+        case SET_SCREEN_SIZE:
             return{
                 ...state,
                 windowSize: action.payload
@@ -41,6 +45,7 @@ const mainReducer = (state, action)=>{
         //  selectedJobID: fakedata[0].id,
          selectedJobData: fakedata[0],
          isJobClicked: false,
+         istoggleClicked: false,
          windowSize: {innerWidth:window.innerWidth, innerHeight: window.innerHeight}
         }
     
@@ -61,7 +66,7 @@ const mainReducer = (state, action)=>{
         const setWindowSize =()=> {
             const {innerWidth, innerHeight} = window; 
             dispatch({
-                type: "SET_SCREEN_SIZE",
+                type: SET_SCREEN_SIZE,
                 payload:{innerWidth, innerHeight}
             })
             if(innerWidth>650 ){
@@ -82,8 +87,15 @@ const mainReducer = (state, action)=>{
 
         const jobClicked = (arg)=>{     
             dispatch({
-                type: 'CLICK_JOB',
+                type: CLICK_JOB,
                 payload: arg
+            })
+        }
+
+        const toggleClicked =()=>{
+            dispatch({
+                type: CLICK_TOGGLE,
+                payload: !state.istoggleClicked
             })
         }
 
@@ -92,7 +104,7 @@ const mainReducer = (state, action)=>{
             const job = state.jobList.filter(jobL => jobL.id === e.target.id)
             try {
                 dispatch({
-                    type: "LOAD_SELECTED_JOBDATA",
+                    type: LOAD_SELECTED_JOBDATA,
                     payload:job[0]
                 })
 
@@ -102,7 +114,7 @@ const mainReducer = (state, action)=>{
             jobClicked(true)
 
         }
-        
+
         
         const calculateDaysPosted =(datePosted)=>{
             const today = new Date();
@@ -120,10 +132,11 @@ const mainReducer = (state, action)=>{
         sortJobType,
         calculateDaysPosted,
         selectJob,
-        // styleSwitch,
+        toggleClicked,
         windowSize: state.windowSize,
         selectedJob: state.selectedJobData,
-        isJobClicked: state.isJobClicked
+        isJobClicked: state.isJobClicked,
+        istoggleClicked: state.istoggleClicked
     }}>    
         {props.children}
     </MainContext.Provider>

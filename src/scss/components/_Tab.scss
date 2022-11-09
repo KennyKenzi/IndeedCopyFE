@@ -1,6 +1,4 @@
-$themecolour1: rgba(22, 22, 22, 0.8);
-$themecolour2: rgb(110, 110, 110);
-$themecolour3: #2557a7;
+@use '../custom' as *;
 
 
 .app__tabs{
@@ -35,4 +33,7 @@ $themecolour3: #2557a7;
         }
     }
 }
+
+
+
 

@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
-import '../../css/Navbar.css'
+import React, { Component, useContext } from 'react'
+import { MainContext } from '../MainBody/MainState'
 
-export default class NavbarSearch extends Component {
+const NavbarSearch =()=>{
+
+const mainContext = useContext(MainContext)
+const {istoggleClicked} = mainContext
 
 
-
-
-  render() {
 
 
 
     return (
             <div className = "app__navbarsearch">
+                <div className={istoggleClicked?"background__overlay": ""} ></div>
                 <form className='app__navbarsearch-inputfield'>
                     <div className="row gy-4">
                         <div className="col-lg">
@@ -36,8 +37,8 @@ export default class NavbarSearch extends Component {
                 </div>
             </div>
     )
-  }
 
 
 }
 
+export default NavbarSearch

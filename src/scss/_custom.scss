@@ -1,0 +1,41 @@
+
+$themecolour1: rgba(22, 22, 22, 0.8);
+$themecolour2: rgb(110, 110, 110);
+$themecolour3: #2557a7;
+
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 5rem;
+        left: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+        transition: all 0.4s ease;
+        display: block;
+        background-color: rgb(255, 255, 255);
+        z-index:99999;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto !important;
+        margin-left: 50%;
+        left: 50%;
+        transition: all 0.2s ease;
+    }
+    .navbar-collapse.show {
+        left: 50%;
+    }
+}
+// button.navbar-toggler{
+//     border: none
+// }
+// $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+// $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+// $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// $font-family-base:       $font-family-sans-serif !default;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
