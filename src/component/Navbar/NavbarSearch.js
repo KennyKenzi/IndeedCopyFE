@@ -12,7 +12,7 @@ const {istoggleClicked} = mainContext
 
     return (
             <div className = "app__navbarsearch">
-                <div className={istoggleClicked?"background__overlay": ""} ></div>
+                {/* <div className={istoggleClicked?"background__overlay": ""} ></div> */}
                 <form className='app__navbarsearch-inputfield'>
                     <div className="row gy-4">
                         <div className="col-lg">

@@ -71,6 +71,10 @@ const mainReducer = (state, action)=>{
             })
             if(innerWidth>650 ){
                 jobClicked(false)
+                if(state.istoggleClicked){
+                    toggleClicked()
+                }
+                
             }
         }   
 
