@@ -5,6 +5,8 @@ $themecolour3: #2557a7;
 
 
 @media (max-width: 992px) {
+
+    @media (min-width: 768px) {
     .navbar-collapse {
         position: absolute;
         top: 5rem;
@@ -28,6 +30,7 @@ $themecolour3: #2557a7;
     .navbar-collapse.show {
         left: 50%;
     }
+}
 }
 // button.navbar-toggler{
 //     border: none

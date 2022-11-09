@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-// import '../../css/Tab.css'
+import React, { useState , useContext} from 'react'
+import { TabContext } from './TabState'
 
 
 
 const Tab=()=>{
     const [activeTab, setActiveTab] = useState('jobfeed')
+
+    const tabContext = useContext(TabContext)
+    const {tabClicked} = tabContext
 
 
 
@@ -12,6 +15,7 @@ const Tab=()=>{
      const clickTab=(e)=>{ 
         console.log(e.target.id)
         setActiveTab( e.target.id)
+        tabClicked(e.target.id)
     }
 
 
